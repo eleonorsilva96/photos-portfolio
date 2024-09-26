@@ -1,0 +1,48 @@
+app:
+    url: http://example.test                        # domain that you will use
+    locale: en                                      # locale of the project
+    debug: true                                     # Debug. Set to off if you plan to run this in production
+
+cms:
+    theme: theme-name                               # No spaces. dashes only
+    edgeUpdates: false                              # Specify edge updates. More info Here: https://octobercms.com/docs/setup/configuration#edge-updates
+    disableCoreUpdates: false             
+    enableSafeMode: false                           # prevents the system from editing the code section of the site for CMS Pages
+    project: 1234567890ABCDEFG                      # Project ID. Read More Here: https://octobercms.com/help/site/projects
+
+database:
+    connection: mysql
+    host: localhost
+    port: 3306
+    username: root
+    password: password
+    database: database
+
+git:
+    deployment: false
+    bareRepo: false                                 # Exclude everything except themes and custom plugins in git
+    excludePlugins: false                           # Even exclude plugins from your repo. Private plugins will be
+                                                    # checkout out again during each "install" run. Be careful!
+                                                    # Manual changes to these plugins will be overwritten.
+
+plugins:                                            #initial list of plugins for a basic stack
+ - anandpatel.wysiwygeditors
+ - indikator.backend
+ - inetis.dump
+ - janvince.smallrecords
+ - martin.forms
+ - offline.responsiveimages
+ - october.drivers
+ - rainlab.blog
+ - rainlab.pages
+ - samuell.contenteditor
+ - toughdeveloper.imageresizer
+ - vdlp.redirect
+ - vojtasvoboda.twigextensions
+ - offline.speedy
+
+mail:
+    host: smtp.mailgun.org
+    name: User Name
+    address: email@example.com
+    driver: log
